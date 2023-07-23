@@ -108,17 +108,3 @@ function cliqueTitulo() {
 
   outMaterias.appendChild(artMaterias);
 }
-
-function ordenar() {
-
-  const slcOrdenamento = document.getElementById("slcOrdenamento");
-
-  if (slcOrdenamento.value = "vazio") {
-
-    alert("escolha uma ordem valida!");
-    slcOrdenamento.value = "";
-    slcOrdenamento.focus();
-
-  }
-else if()
-}
