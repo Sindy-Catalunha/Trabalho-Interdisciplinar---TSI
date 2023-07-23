@@ -23,6 +23,7 @@ for (var i = 0; i < vetTitulo.length; i++) {
   autor.className = "materia-autor";
 
   divContainerMateria.appendChild(img);
+
   divConteudoMateria.appendChild(titulo);
   divConteudoMateria.appendChild(autor);
 
@@ -106,4 +107,18 @@ function cliqueTitulo() {
   artMaterias.appendChild(autor);
 
   outMaterias.appendChild(artMaterias);
+}
+
+function ordenar() {
+
+  const slcOrdenamento = document.getElementById("slcOrdenamento");
+
+  if (slcOrdenamento.value = "vazio") {
+
+    alert("escolha uma ordem valida!");
+    slcOrdenamento.value = "";
+    slcOrdenamento.focus();
+
+  }
+else if()
 }

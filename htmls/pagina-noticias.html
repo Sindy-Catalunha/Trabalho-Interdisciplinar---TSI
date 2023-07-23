@@ -27,14 +27,15 @@
                     </li>
                     <li>
                         <a class="opcoesCabecalho" href="pagina-noticias.html">
-                            <img id="imgIcone" src="../imagens/ImagensHeaderFooter/noticia.png" alt="noticia">NOTÍCIAS</a>
+                            <img id="imgIcone" src="../imagens/ImagensHeaderFooter/noticia.png"
+                                alt="noticia">NOTÍCIAS</a>
                     </li>
                     <li>
                         <a class="opcoesCabecalho" href="login.html">
                             <img id="imgIcone" src="../imagens/ImagensHeaderFooter/login.png" alt="noticia">LOGIN</a>
                     </li>
                     <li id="campoPesquisa"><input id="inBuscaAutor" type="search">
-                    <img src="../imagens/ImagensHeaderFooter/lupaPreta.png" id="imgLupa" alt="buscar" />
+                        <img src="../imagens/ImagensHeaderFooter/lupaPreta.png" id="imgLupa" alt="buscar" />
                     </li>
                 </ul>
             </nav>
@@ -42,6 +43,13 @@
     </header>
 
     <main>
+        <div>
+            <select id="slcOrdenamento">
+                <option value="alfabetica">ordem alfabetica</option>
+                <option value="publicaçao">ordem de publicaçao</option>
+                <option value="vazio" selected disabled>selecione a ordem: </option>
+            </select>
+        </div>
         <!-- Corpo da página inicial do site -->
 
         <div id="outMaterias"></div>
@@ -53,6 +61,7 @@
     </footer>
 
     <script src="../javascript/vetores.js"></script>
-    <script src="../javascript/pagina-inicial.js"></script>
+    <script src="../javascript/pagina-noticias.js"></script>
 </body>
+
 </html>
