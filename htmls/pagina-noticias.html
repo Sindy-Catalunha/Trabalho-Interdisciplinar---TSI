@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 
 <html lang="pt-br">
-<!-- Código realizado por João Vitor, Giovanna, Sindy, Adrian e Laura - TEMA: Gerenciamento de um site de notícias-->
+<!-- Código realizado por João Vitor, Giovanna, Sindy, Adrian e Laura - TEMA: Gerenciamento de um site de notícias -->
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <link REL="SHORTCUT ICON" HREF="../imagens/ImagensHeaderFooter/logo.png">
     <title>Home - INFOEDIT</title>
+
+    <!-- Referência aos arquivos CSS necessários -->
     <link rel="stylesheet" href="../stylesheets/reset.css">
     <link rel="stylesheet" href="../stylesheets/estilo-fixo.css">
     <link rel="stylesheet" href="../stylesheets/pagina-noticias.css">
@@ -17,7 +19,7 @@
 <body>
     <!--Cabeçalho comum do site-->
     <header>
-        <div class="caixa">
+        <div class="caixaHeader">
             <img id="logoHeader" src="../imagens/ImagensHeaderFooter/logo.png" alt="logo">
             <nav>
                 <ul>
@@ -43,25 +45,19 @@
     </header>
 
     <main>
-        <div>
-            <select id="slcOrdenamento">
-                <option value="alfabetica">ordem alfabetica</option>
-                <option value="publicaçao">ordem de publicaçao</option>
-                <option value="vazio" selected disabled>selecione a ordem: </option>
-            </select>
-        </div>
-        <!-- Corpo da página inicial do site -->
+        <!-- Corpo da página de notícias do site feitos pelo js -->
 
         <div id="outMaterias"></div>
     </main>
-
+        <!--FOOTER comum do site-->
     <footer>
         <img id="logoFooter" src="../imagens/ImagensHeaderFooter/logo.png" alt="logo">
         <p id="copyright">&copy; Copyright INFOEDIT</p>
     </footer>
 
+    <!-- Referência aos arquivos JavaScript necessários -->
     <script src="../javascript/vetores.js"></script>
-    <script src="../javascript/pagina-noticias.js"></script>
+    <script src="../javascript/pagina-noticia.js"></script>
 </body>
 
 </html>

@@ -4,7 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link REL="SHORTCUT ICON" HREF="../imagens/ImagensHeaderFooter/logo.png">
     <title>Inserir Notícias - INFOEDIT</title>
+
+    <!-- Referência aos arquivos CSS necessários -->
     <link rel="stylesheet" href="../stylesheets/reset.css">
     <link rel="stylesheet" href="../stylesheets/estilo-fixo.css">
     <link rel="stylesheet" href="../stylesheets/editar-inserir-excluir.css">
@@ -15,35 +18,39 @@
 <body>
     <!--Cabeçalho comum do site-->
     <header>
-        <img id="logoHeader" src="../imagens/ImagensHeaderFooter/logo.png" alt="logo">
-        <nav>
-            <ul>
-                <li>
-                    <a class="opcoesCabecalho" href="pagina-inicial.html">
-                        <img id="imgIcone" src="../imagens/ImagensHeaderFooter/casa.png" alt="casa">INÍCIO</a>
-                </li>
-                <li>
-                    <a class="opcoesCabecalho" href="pagina-noticias.html">
-                        <img id="imgIcone" src="../imagens/ImagensHeaderFooter/noticia.png" alt="noticia">NOTÍCIAS</a>
-                </li>
-                <li>
-                    <a class="opcoesCabecalho" href="inserir-noticias.html">INSERIR</a>
-                </li>
-                <li>
-                    <a class="opcoesCabecalho" href="editar-noticias.html">EDITAR</a>
-                </li>
-                <li>
-                    <a class="opcoesCabecalho" href="excluir-noticias.html">EXCLUIR</a>
-                </li>
-            </ul>
-        </nav>
+        <!-- Caixa de elementos de navegação -->
+        <div class="caixaHeader">
+            <img id="logoHeader" src="../imagens/ImagensHeaderFooter/logo.png" alt="logo">
+            <nav>
+                <ul>
+                    <li>
+                        <a class="opcoesCabecalho" href="pagina-inicial.html">
+                            <img id="imgIcone" src="../imagens/ImagensHeaderFooter/casa.png" alt="casa">INÍCIO</a>
+                    </li>
+                    <li>
+                        <a class="opcoesCabecalho" href="pagina-noticias.html">
+                            <img id="imgIcone" src="../imagens/ImagensHeaderFooter/noticia.png"
+                                alt="noticia">NOTÍCIAS</a>
+                    <li>
+                        <a class="opcoesCabecalho" href="inserir-noticias.html">INSERIR</a>
+                    </li>
+                    <li>
+                        <a class="opcoesCabecalho" href="editar-noticias.html">EDITAR</a>
+                    </li>
+                    <li>
+                        <a class="opcoesCabecalho" href="excluir-noticias.html">EXCLUIR</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
     <!-- Corpo da página inicial do site -->
     <main>
-        
+        <!-- Título/subtítulos de função da página -->
         <h1 class="tituloFixo">INSIRA UMA NOTÍCIA</h1>
 
+        <!-- Formulário de preenchimento de notícia -->
         <form>
             <div class="form-group">
                 <label class="subtitulo">Título da Matéria:</label>
@@ -62,15 +69,17 @@
             </div>
         </form>
 
+        <!-- Saída de preenchimento -->
         <div id="outMaterias"></div>
     </main>
 
-    <!-- Rodapé comum do site -->
+    <!--FOOTER comum do site-->
     <footer>
         <img id="logoFooter" src="../imagens/ImagensHeaderFooter/logo.png" alt="logo">
         <p id="copyright">&copy; Copyright INFOEDIT</p>
     </footer>
 
+    <!-- Referência aos arquivos JavaScript necessários -->
     <script src="../javascript/vetores.js"></script>
     <script src="../javascript/inserir-noticias.js"></script>
 

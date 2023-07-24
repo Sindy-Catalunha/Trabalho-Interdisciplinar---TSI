@@ -12,49 +12,61 @@ function pesquisarExcluir() {
 
     outMaterias.innerHTML = "";
 
-    for (var i = 0; i < vetTitulo.length; i++) {
+    if (inPesquisaExcluir.value == "") {
 
-        let autorAux = vetTitulo[i].toUpperCase();
+        alert("Digite um título.");
+        inPesquisaExcluir.focus();
+        outMaterias.innerHTML = "";
 
-        if (autorAux.indexOf(pesquisaTitulo) >= 0) {
-            var divContainerMateria = document.createElement("div");
-            divContainerMateria.className = "materia-container";
 
-            //EXIBINDO AS IMAGENS DAS NOTICIAS;
-            var img = document.createElement("img");
-            img.src = "../imagens/ImagensNoticias/" + vetImagens[i];
-            img.className = "materia-imagem";
+        //CRIANDO UMA ESTRUTURA DE REPETIÇÁO PARA PESQUISAR 
+    } else {
+        for (var i = 0; i < vetTitulo.length; i++) {
 
-            //CRIANDO DIVS PARA ESTILIZAÇÃO
-            var divConteudoMateria = document.createElement("div");
-            divConteudoMateria.className = "materia-conteudo";
+            let autorAux = vetTitulo[i].toUpperCase();
 
-            //MOSTRANDO OS TITULOS DA MATERIA;
-            var titulo = document.createElement("h1");
-            titulo.className = "materia-titulo";
-            titulo.innerHTML = vetTitulo[i];
-            titulo.id = "noticia" + i;
-            titulo.addEventListener("click", cliqueTituloExcluir);
+            if (autorAux.indexOf(pesquisaTitulo) >= 0) {
+                var divContainerMateria = document.createElement("div");
+                divContainerMateria.className = "materia-container";
 
-            //MOSTRANDO NOME DO AUTOR;
-            var autor = document.createElement("h3");
-            autor.innerHTML = vetAutor[i];
-            autor.className = "materia-autor";
+                //EXIBINDO AS IMAGENS DAS NOTICIAS;
+                var img = document.createElement("img");
+                img.src = "../imagens/ImagensNoticias/" + vetImagens[i];
+                img.className = "materia-imagem";
 
-            var button = document.createElement("input");
-            button.type = "button";
-            button.value = "Excluir";
-            button.id = "btExcluir" + i;
-            button.className = "materia-button";
-            button.addEventListener("click", excluirDados);
+                //CRIANDO DIVS PARA ESTILIZAÇÃO
+                var divConteudoMateria = document.createElement("div");
+                divConteudoMateria.className = "materia-conteudo";
 
-            divContainerMateria.appendChild(img);
-            divConteudoMateria.appendChild(titulo);
-            divConteudoMateria.appendChild(autor);
-            divConteudoMateria.appendChild(button);
+                //MOSTRANDO OS TITULOS DA MATERIA;
+                var titulo = document.createElement("h1");
+                titulo.className = "materia-titulo";
+                titulo.innerHTML = vetTitulo[i];
+                titulo.id = "noticia" + i;
+                titulo.addEventListener("click", cliqueTituloExcluir);
 
-            divContainerMateria.appendChild(divConteudoMateria);
+                //MOSTRANDO NOME DO AUTOR;
+                var autor = document.createElement("h3");
+                autor.innerHTML = vetAutor[i];
+                autor.className = "materia-autor";
 
+                //CRIANDO BOTÃO DE EXCLUIR COM ID; 
+                var button = document.createElement("input");
+                button.type = "button";
+                button.value = "Excluir";
+                button.id = "btExcluir" + i;
+                button.className = "materia-button";
+                button.addEventListener("click", excluirDados);
+
+                //JUNTANDO IMG/TITULO/AUTOR/BUTTON EM "divConteudoMateria" PARA EXIBIR AS NOTICIAS;
+                divContainerMateria.appendChild(img);
+                divConteudoMateria.appendChild(titulo);
+                divConteudoMateria.appendChild(autor);
+                divConteudoMateria.appendChild(button);
+
+                divContainerMateria.appendChild(divConteudoMateria);
+
+            //EXIBINDO AS NOTICIAS;
             outMaterias.appendChild(divContainerMateria);
         }
     }
@@ -100,12 +112,12 @@ function cliqueTituloExcluir() {
 
     outMaterias.appendChild(artMaterias);
 }
-
+}
 function excluirDados() {
-    var idClicado = this.id;
-    idAtual = idClicado.substring(9);
+    var idClicado = this.id; //VERIFICA O ID DO BOTAO,E GUARDA O ID DO BOTAO CLICADO "btExcluir(0 a 5)"
+    idAtual = idClicado.substring(9);  //PEGA O CARACTERE DE NUMERO 9 E GUARDA; 
 
-    vetTitulo.splice(idAtual, 1);
+    vetTitulo.splice(idAtual, 1); //SELECIONA O ELEMENTO DA POSIÇÃO idAtual E EXCLUI ELE (1);
     vetAutor.splice(idAtual, 1);
     vetImagens.splice(idAtual, 1);
     vetTexto.splice(idAtual, 1);
